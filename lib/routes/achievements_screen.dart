@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'achievements_screen.dart';
-class TimerScreen extends StatefulWidget {
-  const TimerScreen({super.key});
+import 'timer_screen.dart';
+
+class AchievementsScreen extends StatefulWidget {
+  const AchievementsScreen({super.key});
 
   @override
-  State<TimerScreen> createState() =>
-      _TimerScreen();
+  State<AchievementsScreen> createState() =>
+      _AchievementsScreen();
 }
 
-class _TimerScreen
-    extends State<TimerScreen> {
+class _AchievementsScreen
+    extends State<AchievementsScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class _TimerScreen
         title: const Text('i forget if we wanted a title'),
       ),
       body: const Center(
-        child: Text('hello'),
+        child: Text('this is gonna be the achievements screen'),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -40,13 +41,13 @@ class _TimerScreen
             label: 'Achievements',
           ),
         ],
-        currentIndex: 1,
+        currentIndex: 2,
         selectedItemColor: const Color.fromARGB(255, 23, 90, 146),
         onTap: (index) {
-          if (index == 2) {
+          if (index == 1) {
             Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => const AchievementsScreen()),
+            MaterialPageRoute(builder: (context) => const TimerScreen()),
             );
           }
         }

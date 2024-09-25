@@ -4,12 +4,9 @@ class TimerScreen extends StatefulWidget {
   const TimerScreen({super.key});
 
   @override
-  State<TimerScreen> createState() =>
-      _TimerScreen();
+  State<TimerScreen> createState() => _TimerScreen();
 }
-
-class _TimerScreen
-    extends State<TimerScreen> {
+class _TimerScreen extends State<TimerScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +38,11 @@ class _TimerScreen
           ),
         ],
         currentIndex: 1,
-        selectedItemColor: const Color.fromARGB(255, 23, 90, 146),
+        selectedItemColor: Color.fromRGBO(23, 90, 146, 1),
         onTap: (index) {
           if (index == 2) {
-            Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => const AchievementsScreen()),
+            Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => const AchievementsScreen()),
             );
           }
         }

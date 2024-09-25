@@ -5,12 +5,9 @@ class AchievementsScreen extends StatefulWidget {
   const AchievementsScreen({super.key});
 
   @override
-  State<AchievementsScreen> createState() =>
-      _AchievementsScreen();
+  State<AchievementsScreen> createState() => _AchievementsScreen();
 }
-
-class _AchievementsScreen
-    extends State<AchievementsScreen> {
+class _AchievementsScreen extends State<AchievementsScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +42,8 @@ class _AchievementsScreen
         selectedItemColor: const Color.fromARGB(255, 23, 90, 146),
         onTap: (index) {
           if (index == 1) {
-            Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => const TimerScreen()),
+            Navigator.pushReplacement(context, 
+              MaterialPageRoute(builder: (context) => const TimerScreen()),
             );
           }
         }

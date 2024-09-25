@@ -34,8 +34,8 @@ class _AchievementsScreen extends State<AchievementsScreen> {
             label: 'Goals',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.emoji_events),
-            label: 'Achievements',
+            icon: Icon(Icons.military_tech),
+            label: 'Badges',
           ),
         ],
         currentIndex: 2,

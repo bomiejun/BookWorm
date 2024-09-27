@@ -1,9 +1,9 @@
 // who or what is branch and why is it hate me
-//if this doesn't work imma kms
+// if this doesn't work imma kms
 // im gonna kill u if u say no to pls work again
 
 import 'package:flutter/material.dart';
-import "routes/timer_screen.dart";
+import "routes/signup_login.dart";
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const TimerScreen(),
+      home: const SignupLogin(),
     );
   }
 }

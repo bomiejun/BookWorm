@@ -3,7 +3,7 @@
 //pls work
 
 import 'package:flutter/material.dart';
-import "routes/timer_screen.dart";
+import 'routes/signup_login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const TimerScreen(),
+      home: const SignupLogin(),
     );
   }
 }

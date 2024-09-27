@@ -38,7 +38,7 @@ class _TimerScreen extends State<TimerScreen> {
           ),
         ],
         currentIndex: 1,
-        selectedItemColor: Color.fromRGBO(23, 90, 146, 1),
+        selectedItemColor: const Color.fromRGBO(23, 90, 146, 1),
         onTap: (index) {
           if (index == 2) {
             Navigator.pushReplacement(context,

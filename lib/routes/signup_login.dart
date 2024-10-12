@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'timer_screen.dart';
 
 
 class SignupLogin extends StatelessWidget {
@@ -9,14 +10,24 @@ class SignupLogin extends StatelessWidget {
  Widget build(BuildContext context) {
    return Scaffold(
      appBar: AppBar(
-       title: Text(
-         'Sign Up or Login',
-         style: TextStyle(
-           color: Colors.black,
-           fontSize: 18,
-           fontWeight: FontWeight.bold,
-         )
-       ),
+       title: const Text(
+        'Sign Up or Login',
+        style: TextStyle(
+          color: Color.fromARGB(255, 210, 210, 210),
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        )
+      ),
+     ),
+     body: Center(
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.pushReplacement(context,
+          MaterialPageRoute(builder: (context) => const TimerScreen()),
+          );
+        }, child: const Text("NO DELETE PLS"), 
+        // don't delete the button until there's a function button for page navigation/loging in
+      ),
      ),
    );
  }

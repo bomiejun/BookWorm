@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'timer_screen.dart';
 
 
@@ -18,6 +19,14 @@ class SignupLogin extends StatelessWidget {
           fontWeight: FontWeight.bold,
         )
       ),
+      leading: Container(
+        margin:EdgeInsets.all(10),
+        child: SvgPicture.asset('assets/icons/Bookworm_Logo'),
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(10)
+        ),
+      )
      ),
      body: Center(
       child: ElevatedButton(

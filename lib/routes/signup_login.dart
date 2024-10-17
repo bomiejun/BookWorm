@@ -13,9 +13,7 @@ class SignupLogin extends StatelessWidget {
      appBar: appBar(),
      body: Column(
       children: [
-        Container(
-          width: 
-          child: Row(
+        Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -34,7 +32,6 @@ class SignupLogin extends StatelessWidget {
               )
             ],
           ),
-        ),
       ]
      ),
    );
@@ -53,17 +50,6 @@ class SignupLogin extends StatelessWidget {
     backgroundColor: Colors.white,
     elevation: 0.0,
     centerTitle: true,
-      //child: SvgPicture.asset('assets/icons/Bookworm_Logo.png'),
-    /*actions: [
-      Container(
-      margin:const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Colors.black,
-        borderRadius: BorderRadius.circular(10)
-      ),
-      child: SvgPicture.asset('assets/icons/Bookworm_Logo'),
-    )
-    ]*/
    );
  }
 }

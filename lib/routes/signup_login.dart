@@ -11,6 +11,7 @@ class SignupLogin extends StatelessWidget {
  Widget build(BuildContext context) {
    return Scaffold(
      appBar: appBar(),
+     backgroundColor: Colors.white,
      body: Column(
       children: [
         SizedBox(height: 40,),

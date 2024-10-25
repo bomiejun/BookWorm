@@ -63,7 +63,7 @@ class SignupLogin extends StatelessWidget {
     );
   }
 
-Text passwordText() {
+  Text passwordText() {
    return Text(
         'Your Password',
         style: TextStyle(
@@ -72,7 +72,7 @@ Text passwordText() {
           fontWeight: FontWeight.w600,
         ),
       );
- }
+  }
 
  Container usernameInput() {
    return Container(

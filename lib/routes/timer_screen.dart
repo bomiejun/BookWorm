@@ -39,6 +39,66 @@ class _TimerScreen extends State<TimerScreen> {
               ],
             ),
           ),
+          const SizedBox(
+            height: 20
+          ),
+          Row (
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget> [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(90, 50),
+                  maximumSize: const Size(90, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8), // Adjust the radius here
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12), // Optional padding
+                ),
+                onPressed: () {
+
+                },
+                child: const Text("End", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)) 
+                
+              ),
+              const SizedBox(
+                width: 10
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(50, 50),
+                  maximumSize: const Size(50, 50),
+                  padding: const EdgeInsets.all(10), 
+                  shape: RoundedRectangleBorder(
+                    
+                    borderRadius: BorderRadius.circular(8), // Adjust the radius here
+                  ),
+                ),
+                onPressed: () {
+
+                },
+                child: const Icon(Icons.play_arrow) 
+                
+              ),
+              const SizedBox(
+                width: 10
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  alignment: Alignment.center,
+                  minimumSize: const Size(90, 50),
+                  maximumSize: const Size(90, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8), // Adjust the radius here
+                  ),
+                ),
+                onPressed: () {
+
+                },
+                child: const Text("Add", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)) 
+                
+              )
+            ]
+          )
         ]
       ),
       bottomNavigationBar: BottomNavigationBar(

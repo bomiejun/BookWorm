@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'timer_screen.dart';
 
-
+//ello
 class SignupLogin extends StatelessWidget {
  const SignupLogin({super.key});
 
@@ -14,13 +14,13 @@ class SignupLogin extends StatelessWidget {
      backgroundColor: Colors.white,
      body: Column(
       children: [
-        SizedBox(height: 40,),
+        const SizedBox(height: 40,),
         usernameText(),
         usernameInput(),
-        SizedBox(height: 40,),
+        const SizedBox(height: 40,),
         passwordText(),
         passwordInput(),
-        SizedBox(height: 40,),
+        const SizedBox(height: 40,),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -47,8 +47,8 @@ class SignupLogin extends StatelessWidget {
 
  Container passwordInput() {
    return Container(
-      margin: EdgeInsets.only(top: 30,left: 20,right: 20),
-      child: TextField(
+      margin: const EdgeInsets.only(top: 30,left: 20,right: 20),
+      child: const TextField(
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
@@ -65,7 +65,7 @@ class SignupLogin extends StatelessWidget {
   }
 
   Text passwordText() {
-   return Text(
+   return const Text(
         'Your Password',
         style: TextStyle(
           color: Colors.black,
@@ -77,8 +77,8 @@ class SignupLogin extends StatelessWidget {
 
  Container usernameInput() {
    return Container(
-      margin: EdgeInsets.only(top: 30,left: 20,right: 20),
-      child: TextField(
+      margin: const EdgeInsets.only(top: 30,left: 20,right: 20),
+      child: const TextField(
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
@@ -94,7 +94,7 @@ class SignupLogin extends StatelessWidget {
   }
 
  Text usernameText() {
-   return Text(
+   return const Text(
         'Your Username',
         style: TextStyle(
           color: Colors.black,

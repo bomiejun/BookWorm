@@ -14,6 +14,12 @@ class SignupLogin extends StatelessWidget {
      backgroundColor: Colors.white,
      body: Column(
       children: [
+        Image.asset(
+          'assets/icons/Bookworm_Logo.png',
+          width: 200, // Adjust size
+          height: 200,
+          fit: BoxFit.cover, // Optional: Control how the image fits
+        ),
         const SizedBox(height: 40,),
         usernameText(),
         usernameInput(),

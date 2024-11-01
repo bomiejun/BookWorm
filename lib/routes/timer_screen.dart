@@ -57,7 +57,7 @@ class _TimerScreen extends State<TimerScreen> {
                 onPressed: () {
 
                 },
-                child: const Text("End", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)) 
+                child: const Text("End", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18, color: Colors.white)) 
                 
               ),
               const SizedBox(
@@ -76,7 +76,7 @@ class _TimerScreen extends State<TimerScreen> {
                 onPressed: () {
 
                 },
-                child: const Icon(Icons.play_arrow) 
+                child: const Icon(Icons.play_arrow, size: 26, color: Colors.white) 
                 
               ),
               const SizedBox(
@@ -94,7 +94,7 @@ class _TimerScreen extends State<TimerScreen> {
                 onPressed: () {
 
                 },
-                child: const Text("Add", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)) 
+                child: const Text("Add", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18, color: Colors.white)) 
                 
               )
             ]

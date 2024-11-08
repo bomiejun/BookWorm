@@ -19,14 +19,13 @@ class SignupLogin extends StatelessWidget {
           height: 200,
           fit: BoxFit.cover, // Optional: Control how the image fits
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(height: 40,),
         usernameText(),
         usernameInput(),
-        const SizedBox(height: 20,),
+        const SizedBox(height: 40,),
         passwordText(),
         passwordInput(),
-        const SizedBox(height: 20,),
-        checkAgreements(),
+        const SizedBox(height: 40,),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -49,23 +48,6 @@ class SignupLogin extends StatelessWidget {
       ],
      ),
    );
- }
-
- Row checkAgreements() {
-   return Row(
-        children: [
-          SizedBox(child: Checkbox(value: false, onChanged: (value){},)),
-          Text.rich(
-            TextSpan(children: [
-              TextSpan(text: 'I agree to '),
-              TextSpan(text: 'Terms of Use'),
-              TextSpan(text: ' and '),
-              TextSpan(text: 'Privacy Policy'),
-              //https://www.youtube.com/watch?v=TQMMG39qw0c time 12:07
-            ])
-          )
-        ],
-      );
  }
 
  Container passwordInput() {

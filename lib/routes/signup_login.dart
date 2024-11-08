@@ -55,7 +55,7 @@ class SignupLogin extends StatelessWidget {
    return Row(
         children: [
           SizedBox(child: Checkbox(value: false, onChanged: (value){},)),
-          Text.rich(
+          const Text.rich(
             TextSpan(children: [
               TextSpan(text: 'I agree to '),
               TextSpan(text: 'Terms of Use'),

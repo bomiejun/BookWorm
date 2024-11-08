@@ -14,6 +14,8 @@ class _TimerScreen extends State<TimerScreen> {
   Timer? timer;
   int seconds = 0;
   bool isRunning = false;
+  final List<String> items = ['1 min', '5 min', '10 min', '30 min'];
+  String? selectedValue;
 
   void startTimer() {
     if (!isRunning) { // Start only if the timer is not running
@@ -171,24 +173,21 @@ class _TimerScreen extends State<TimerScreen> {
                 const SizedBox(
                   width: 12
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    alignment: Alignment.center,
-                    minimumSize: const Size(90, 50),
-                    maximumSize: const Size(90, 50),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8), // Adjust the radius here
-                    ),
-                    backgroundColor: buttonColor
-                  ),
-                  onPressed: () {
+                DropdownButton<String>(
+                  value: selectedValue, // currently selected item
+                  hint: Text('Add'), // placeholder text
+                  items: items.map((String item) {
+                    return DropdownMenuItem<String>(
+                      value: item,
+                      child: Text(item),
+                    );
+                  }).toList(),
+                  onChanged: (String? newValue) {
                     setState(() {
-                      seconds += 60; // Adds 60 seconds
+                      selectedValue = newValue; // Update the selected item
                     });
                   },
-                  child: const Text("Add", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20, color: Colors.white)),
-                  
-                )
+                ),
               ]
             )
           ]

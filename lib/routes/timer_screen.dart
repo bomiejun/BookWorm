@@ -193,6 +193,7 @@ class _TimerScreen extends State<TimerScreen> {
                     final RenderBox buttonBox = _addButtonKey.currentContext!.findRenderObject() as RenderBox;
                     final Offset position = buttonBox.localToGlobal(Offset.zero);
                     showMenu<int>(
+                      color: Colors.white,
                       context: context,
                       position: RelativeRect.fromLTRB(
                         position.dx,

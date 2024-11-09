@@ -10,12 +10,11 @@ class TimerScreen extends StatefulWidget {
   State<TimerScreen> createState() => _TimerScreen();
 }
 class _TimerScreen extends State<TimerScreen> {
+  final GlobalKey _addButtonKey = GlobalKey();
   Color buttonColor = const Color.fromARGB(255, 210, 190, 124);
   Timer? timer;
   int seconds = 0;
   bool isRunning = false;
-  final List<String> items = ['1 min', '5 min', '10 min', '30 min'];
-  String? selectedValue;
 
   void startTimer() {
     if (!isRunning) { // Start only if the timer is not running
@@ -37,6 +36,12 @@ class _TimerScreen extends State<TimerScreen> {
         isRunning = false;
       });
     }
+  }
+
+  void addTime(int additionalSeconds) {
+    setState(() {
+      seconds += additionalSeconds;
+    });
   }
 
   @override
@@ -173,21 +178,55 @@ class _TimerScreen extends State<TimerScreen> {
                 const SizedBox(
                   width: 12
                 ),
-                DropdownButton<String>(
-                  value: selectedValue, // currently selected item
-                  hint: Text('Add'), // placeholder text
-                  items: items.map((String item) {
-                    return DropdownMenuItem<String>(
-                      value: item,
-                      child: Text(item),
-                    );
-                  }).toList(),
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      selectedValue = newValue; // Update the selected item
+                ElevatedButton(
+                  key: _addButtonKey,
+                  style: ElevatedButton.styleFrom(
+                    alignment: Alignment.center,
+                    minimumSize: const Size(90, 50),
+                    maximumSize: const Size(90, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8), // Adjust the radius here
+                    ),
+                    backgroundColor: buttonColor
+                  ),
+                  onPressed: () {
+                    final RenderBox buttonBox = _addButtonKey.currentContext!.findRenderObject() as RenderBox;
+                    final Offset position = buttonBox.localToGlobal(Offset.zero);
+                    showMenu<int>(
+                      context: context,
+                      position: RelativeRect.fromLTRB(
+                        position.dx,
+                        position.dy + buttonBox.size.height,
+                        position.dx + buttonBox.size.width,
+                        position.dy,
+                      ),
+                      items: [
+                        PopupMenuItem<int>(
+                          value: 1,
+                          child: Text('Add 1 min'),
+                        ),
+                        PopupMenuItem<int>(
+                          value: 5,
+                          child: Text('Add 5 min'),
+                        ),
+                        PopupMenuItem<int>(
+                          value: 10,
+                          child: Text('Add 10 min'),
+                        ),
+                        PopupMenuItem<int>(
+                          value: 30,
+                          child: Text('Add 30 min'),
+                        ),
+                      ],
+                    ).then((value) {
+                      if (value != null) {
+                        addTime(value * 60);
+                      }
                     });
                   },
-                ),
+                  child: const Text("Add", 
+                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20, color: Colors.white)),
+                )
               ]
             )
           ]

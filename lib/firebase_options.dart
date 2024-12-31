@@ -90,4 +90,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'reading-app-da2c7.firebasestorage.app',
     measurementId: 'G-XG9NKMSB7K',
   );
+
 }

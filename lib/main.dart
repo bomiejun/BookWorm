@@ -13,7 +13,7 @@ import 'firebase_options.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   if(kIsWeb){
-    await Firebase.initializeApp(options: FirebaseOptions(apiKey: "AIzaSyDAfcaRaMNz9-KkzB2wn47ZJMFahZcthYg",
+    await Firebase.initializeApp(options: const FirebaseOptions(apiKey: "AIzaSyDAfcaRaMNz9-KkzB2wn47ZJMFahZcthYg",
     authDomain: "reading-app-da2c7.firebaseapp.com",
     databaseURL: "https://reading-app-da2c7.firebaseio.com",
     projectId: "reading-app-da2c7",
